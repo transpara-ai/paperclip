@@ -1133,7 +1133,9 @@ export function heartbeatService(db: Db) {
       warnings.push(
         `No project workspace directory is currently available for this issue. Using fallback workspace "${cwd}" for this run.`,
       );
-    } else {
+    } else if (issueId) {
+      // Only warn when there IS an issue but no workspace could be resolved.
+      // On idle heartbeats (no issueId), falling back to agent home is expected.
       warnings.push(
         `No project or prior session workspace was available. Using fallback workspace "${cwd}" for this run.`,
       );
