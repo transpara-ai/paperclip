@@ -15,3 +15,7 @@ package.json @cryppadotta @devinfoley
 pnpm-lock.yaml @cryppadotta @devinfoley
 pnpm-workspace.yaml @cryppadotta @devinfoley
 .npmrc @cryppadotta @devinfoley
+
+# TLC 4.5 governance ownership
+/.governance/tlc/ @MichaelSaucier
+/.github/workflows/tlc-4.5.yml @MichaelSaucier
